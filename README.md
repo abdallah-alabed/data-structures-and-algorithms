@@ -25,4 +25,4 @@ To run your tests
 
  |challenge Name | image Link |
  | ----- | ----- |
- |array-reverse -challenge 1- | ![array-reverse](./array-reversed.png)|
+ |array-reverse -challenge 1- | [array-reverse](./python/code_challenges/array-reverse)|
