@@ -46,20 +46,35 @@ return arr
 
 ## Verification
 input: [1,2,3,4] 
+
 expected output: [4,3,2,1]
 
 (i=0,f=3)
+
 while i < f:   #true
+
     arr[i],arr[f]=arr[f],arr[i]
-    <!--     1,4 = 4,1      -->
+
+<!--     1,4 = 4,1      -->
+
     i+=1 #1
+
     f-=1 #2
+
 (i=1,f=2)
+
 while i < f:   #true
+
     arr[i],arr[f]=arr[f],arr[i]
-    <!--     2,3 = 3,2      -->
+
+<!--     2,3 = 3,2      -->
+
     i+=1 #2
+
     f-=1 #1
+
 (i=2,f=1)
+
 while i < f:   #false
+
 return arr
