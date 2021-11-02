@@ -27,3 +27,5 @@ To run your tests
  | ----- | ----- |
  |array-reverse -challenge 1- | [array-reverse](./python/code_challenges/array-reverse)|
  |array-insert-shift -challenge 2- | [array-insert-shift](./python/code_challenges/array-insert-shift)|
+ |array-binary-search -challenge 3- | [array-binary-search](./python/code_challenges/array-binary-search)|
+
