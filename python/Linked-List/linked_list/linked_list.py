@@ -5,7 +5,7 @@ class Node:
 
 class LinkedList:
     """
-    This class creates data algorithm for Linked List
+    This class creates data structure for Linked List
     """
 
     def __init__(self):
