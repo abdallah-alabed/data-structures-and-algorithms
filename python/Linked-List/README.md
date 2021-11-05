@@ -14,3 +14,17 @@
 - Will return false when searching for a value in the linked list that does not exist ( done wiith test 4)
 
 - Can properly return a collection of all the values that exist in the linked list ( done with test 2 and 3 )
+
+# Singly Linked List
+A data structure that contains nodes that links/points to the next node in the list.
+
+## Challenge
+Create the data structure for the linked lists were we connect nodes in memory in a sequence.
+
+## API
+the class Linked List have 3 methods:
+- insert: allow us to add a node to the linked list
+
+- includes: check wether the entered value already exists in a node or not.
+
+- to string: return the linked list in a understoodable sequence.
