@@ -5,7 +5,7 @@ class Node:
 
 class LinkedList:
     """
-    Put docstring here
+    This class creates data algorithm for Linked List
     """
 
     def __init__(self):
