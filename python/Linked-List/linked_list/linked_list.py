@@ -30,7 +30,7 @@ class LinkedList:
         return False
         
 
-    def to_string(self):
+    def __str__(self):
  
         output = ""
         if self.head is None:
@@ -43,6 +43,44 @@ class LinkedList:
             output += "NULL"
         return output             
 
+    def append(self,newValue):
+        node=Node(newValue)
+        if self.head is None:
+            self.head=node
+        else:
+            current=self.head
+            while current.next != None:
+                current=current.next
+            current.next=node
+
+    def insert_before(self,value,newValue):
+        node = Node(newValue)
+        current = self.head
+        prev =self.head
+
+        while current:
+            if current.value == value:
+                if current==prev:
+                    self.head = node
+                    node.next = current
+                    break
+                else:
+                    prev.next = node
+                    node.next = current
+            prev = current
+            current = current.next
+
+    def insert_after(self,value,newValue):
+        node=Node(newValue)
+        current=self.head
+        while current:
+            if current.value == value:
+                node.next = current.next
+                current.next = node
+                break
+            current=current.next
+        
+             
 
 
 # if __name__=="__main__":
