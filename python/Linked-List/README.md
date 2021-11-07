@@ -1,5 +1,5 @@
 # Check-list
-## 5/11/2021
+## 5/11/2021 CC5
 
 - Can successfully instantiate an empty linked list (done in test 1)
 
@@ -28,3 +28,29 @@ the class Linked List have 3 methods:
 - includes: check wether the entered value already exists in a node or not.
 
 - to string: return the linked list in a understoodable sequence.
+
+
+## 5/11/2021 CC6
+
+- Can successfully add a node to the end of the linked list
+
+- Can successfully add multiple nodes to the end of a linked list
+
+- Can successfully insert a node before a node located i the middle of a linked list
+
+- Can successfully insert a node before the first node of a linked list
+
+- Can successfully insert after a node in the middle of the linked list
+
+- Can successfully insert a node after the last node of the linked list
+
+## Challenge
+add nodes dependent on the location defined by the function arguments
+
+## API
+added 3 new methods to the class:
+- append: allow us to add a node to the linked list
+
+- add before: add a node before the defined node value entered by the user
+
+- add after: add a node after the defined node value entered by the user
