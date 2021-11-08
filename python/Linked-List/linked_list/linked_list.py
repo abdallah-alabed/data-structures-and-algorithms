@@ -79,15 +79,24 @@ class LinkedList:
                 current.next = node
                 break
             current=current.next
+
+    def kthFromEnd(self,value):
+        current = self.head
+        NodesCounter=1
+        while current.next != None:
+            NodesCounter +=1
+            current=current.next
+        current=self.head
+        if value > NodesCounter:
+            return("Exception")
+        elif value < 0:
+            return("Exception")
+        NodeValue = NodesCounter - value - 1
+        for i in range(NodesCounter):
+            if i == NodeValue:
+                return current.value
+            else:
+                current=current.next
         
              
-
-
-# if __name__=="__main__":
-#     ll = LinkedList()
-#     ll.insert(1)
-#     ll.insert(2)
-#     ll.insert(3)
-#     ll.insert(4)
-#     print(ll.to_string())
     
