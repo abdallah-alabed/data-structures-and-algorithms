@@ -124,3 +124,52 @@ def test_insert_node_after_the_last_node():
     ll.insert(4)
     ll.insert_after(4,5)
     assert ll.__str__() == "1 -> 2 -> 3 -> 4 -> 5 -> NULL"
+
+## for code challenge 7
+
+def test_kthFromEnd_greater_than_the_length_of_the_linked_list():
+    ll = LinkedList()
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    ll.insert(4)
+    actual = ll.kthFromEnd(10)
+    expected = "Exception"
+    assert actual == expected
+
+def test_k_same_length_as_list():
+    ll = LinkedList()
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    ll.insert(4)
+    actual = ll.kthFromEnd(4)
+    expected = None
+    assert actual == expected
+
+def test_k_is_not_postive_integer():
+    ll = LinkedList()
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    ll.insert(4)
+    actual = ll.kthFromEnd(-3)
+    expected = "Exception"
+    assert actual == expected
+
+def test_linked_list_size_1():
+    ll = LinkedList()
+    ll.insert(1)
+    actual = ll.kthFromEnd(0)
+    expected = 1
+    assert actual == expected
+
+def test_k_happy_path():
+    ll = LinkedList()
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    ll.insert(4)
+    actual = ll.kthFromEnd(2)
+    expected = 2
+    assert actual == expected
