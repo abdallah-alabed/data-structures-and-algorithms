@@ -29,8 +29,7 @@ the class Linked List have 3 methods:
 
 - to string: return the linked list in a understoodable sequence.
 
-
-## 5/11/2021 CC6
+## 7/11/2021 CC6
 
 - Can successfully add a node to the end of the linked list
 
@@ -54,3 +53,37 @@ added 3 new methods to the class:
 - add before: add a node before the defined node value entered by the user
 
 - add after: add a node after the defined node value entered by the user
+
+![cc6](./cc6.png)
+
+## 8/11/2021 CC7
+
+- Where k is greater than the length of the linked list
+- Where k and the length of the list are the same
+- Where k is not a positive integer
+- Where the linked list is of a size 1
+- “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+
+## Challenge
+- returns the node value k away from the end
+
+## API
+added a new method to the class:
+- kth from end: returns the node value k away from the end
+
+![cc7](./cc7.png)
+
+## 8/11/2021 CC8
+
+- two linked lists with the same length
+- the first linked list is longer than the second one
+- the second linked list is longer than the first one
+
+## Challenge
+- Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list.
+
+## API
+added a new method to the class:
+- zip_lists: takes in two linked lists and start putting items from each one at a time until both lists are empty
+
+![cc8](./cc8.png)
