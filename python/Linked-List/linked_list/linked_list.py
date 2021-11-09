@@ -12,14 +12,10 @@ class LinkedList:
         self.head=None
 
     def insert(self,value):
-        node=Node(value)
-        if self.head is None:
-            self.head=node
-        else:
-            current=self.head
-            while current.next != None:
-                current=current.next
-            current.next=node
+        node = Node(value)
+        if self.head:
+            node.next=self.head
+        self.head = node
 
     def includes(self,value):
         current = self.head
@@ -28,30 +24,17 @@ class LinkedList:
                 return True
             current = current.next
         return False
-        
-
-    def __str__(self):
- 
-        output = ""
-        if self.head is None:
-            output+="NULL HEAD"
-        else:
-            current = self.head
-            while current:
-                output += f"{current.value} -> "
-                current = current.next
-            output += "NULL"
-        return output             
+                    
 
     def append(self,newValue):
-        node=Node(newValue)
-        if self.head is None:
-            self.head=node
+        node = Node(newValue)
+        current=self.head
+        if current:
+            while current.next:
+                current = current.next
+            current.next = node
         else:
-            current=self.head
-            while current.next != None:
-                current=current.next
-            current.next=node
+            self.head = node
 
     def insert_before(self,value,newValue):
         node = Node(newValue)
@@ -99,4 +82,46 @@ class LinkedList:
                 current=current.next
         
              
-    
+    def zip_lists(self,linked_list1,linked_list2):
+        output_list=LinkedList()
+        current1 = linked_list1.head
+        current2 = linked_list2.head
+
+        while current1 and current2  :
+            output_list.append(current1)
+            output_list.append(current2)
+            current1 = current1.next
+            current2 = current2.next
+        while current1:
+            output_list.append(current1)
+            current1 = current1.next
+        while current2:
+            output_list.append(current2)
+            current2 = current2.next
+        return output_list
+
+    def __str__(self):
+ 
+        output = ""
+        if self.head is None:
+            output+="NULL HEAD"
+        else:
+            current = self.head
+            while current:
+                output += f"{current.value} -> "
+                current = current.next
+            output += "NULL"
+        return output 
+
+    def __repr__(self):
+ 
+        output = ""
+        if self.head is None:
+            output+="NULL HEAD"
+        else:
+            current = self.head
+            while current:
+                output += f"{current.value} -> "
+                current = current.next
+            output += "NULL"
+        return output 
