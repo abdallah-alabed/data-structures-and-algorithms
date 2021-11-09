@@ -185,7 +185,7 @@ def test_zip_lists_same_length():
     ll_2.append(4)
     ll_3 = LinkedList()
     ll_3 = ll_3.zip_lists(ll_1,ll_2)
-    assert ll_3.__str__() == "1 -> 3 -> 2 -> 4 -> None"
+    assert ll_3.__str__() == "1 -> 3 -> 2 -> 4 -> NULL"
 
 def test_zip_lists_first_one_longer():
     ll_1 = LinkedList()
@@ -197,19 +197,29 @@ def test_zip_lists_first_one_longer():
     ll_2.append(5)
     ll_3 = LinkedList()
     ll_3 = ll_3.zip_lists(ll_1,ll_2)
-    assert ll_3.__str__() == "1 -> 4 -> 2 -> 5 -> 3 -> None"
+    assert ll_3.__str__() == "1 -> 4 -> 2 -> 5 -> 3 -> NULL"
 
 def test_zip_lists_second_one_longer():
     ll_1 = LinkedList()
     ll_1.append(1)
     ll_1.append(2)
-    ll_1.__str__()
+    # ll_1.__str__()
     ll_2 = LinkedList()
     ll_1.append(3)
     ll_2.append(4)
     ll_2.append(5)
-    ll_2.__str__()
-    ll_3 = LinkedList()
-    actual = ll_3.zip_lists(ll_1,ll_2)
-    assert actual== "1 -> 3 -> 2 -> 4 -> 5 -> None"
+    # ll_2.__str__()
+    actual = ll_1.zip_lists(ll_1,ll_2)
+    assert actual.__str__() == "1 -> 3 -> 2 -> 4 -> 5 -> NULL"
    
+
+# if __name__ == "__main__":
+#     ll_1 = LinkedList()
+#     ll_1.append(1)
+#     ll_2 = LinkedList()
+#     ll_2.append(3)
+#     print(ll_1)
+#     print(ll_2)
+#     cry=ll_1
+#     print(ll_2.zip_lists(cry,ll_2))
+

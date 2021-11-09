@@ -81,7 +81,7 @@ class LinkedList:
             else:
                 current=current.next
         
-             
+           
     def zip_lists(self,linked_list1,linked_list2):
         output_list=LinkedList()
         current1 = linked_list1.head
@@ -89,8 +89,8 @@ class LinkedList:
 
         while current1 and current2  :
             output_list.append(current1)
-            output_list.append(current2)
             current1 = current1.next
+            output_list.append(current2)
             current2 = current2.next
         while current1:
             output_list.append(current1)
@@ -125,3 +125,6 @@ class LinkedList:
                 current = current.next
             output += "NULL"
         return output 
+
+
+ 
