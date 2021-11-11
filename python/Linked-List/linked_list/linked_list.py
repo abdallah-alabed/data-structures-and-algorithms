@@ -80,25 +80,7 @@ class LinkedList:
                 return current.value
             else:
                 current=current.next
-        
-           
-    def zip_lists(self,linked_list1,linked_list2):
-        output_list=LinkedList()
-        current1 = linked_list1.head
-        current2 = linked_list2.head
-
-        while current1 and current2  :
-            output_list.append(current1)
-            current1 = current1.next
-            output_list.append(current2)
-            current2 = current2.next
-        while current1:
-            output_list.append(current1)
-            current1 = current1.next
-        while current2:
-            output_list.append(current2)
-            current2 = current2.next
-        return output_list
+       
 
     def __str__(self):
  
@@ -127,4 +109,32 @@ class LinkedList:
         return output 
 
 
- 
+def zip_lists(linked_list1,linked_list2):
+    output_list=LinkedList()
+    current1 = linked_list1.head
+    current2 = linked_list2.head
+
+    while current1 and current2  :
+        output_list.append(current1)
+        current1 = current1.next
+        output_list.append(current2)
+        current2 = current2.next
+    while current1:
+        output_list.append(current1)
+        current1 = current1.next
+    while current2:
+        output_list.append(current2)
+        current2 = current2.next
+    return output_list
+
+def reverseMe(ll):
+    previous = None         
+    current = ll.head     
+    following = current.next    
+    while current:
+        current.next = previous 
+        previous = current      
+        current = following         
+        if following:               
+            following = following.next    
+    ll.head = previous
