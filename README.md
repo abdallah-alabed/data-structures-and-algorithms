@@ -163,3 +163,19 @@ Queue have 4 methods: Enqueue, Dequeue, Peek, Is empty
 - Dequeue: removes node from the queue
 - peek: checks the queue front value
 - Is_empty: checks whether the stack is empty or not
+
+
+
+## Challenge
+### cc11 14/11/2021
+
+- enqueue queue using stack push and pop
+- dequeue queue using stack push and pop
+> dequeue not done
+
+
+## API
+### pseudo queue
+using some existing classes (stack and node) we need to create a queue that functions in FIFO style.
+
+![cc11](./cc11.png)
