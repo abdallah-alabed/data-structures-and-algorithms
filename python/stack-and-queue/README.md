@@ -35,3 +35,10 @@ Queue have 4 methods: Enqueue, Dequeue, Peek, Is empty
 - Dequeue: removes node from the queue
 - peek: checks the queue front value
 - Is_empty: checks whether the stack is empty or not
+
+
+
+
+
+# code challenge 11 
+![cc11](../stack-and-queue/cc11.png)
