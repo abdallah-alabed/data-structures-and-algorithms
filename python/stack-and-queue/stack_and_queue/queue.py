@@ -85,3 +85,84 @@ class PseudoQueue():
             check = check.next
         outputStr += 'NULL'
         return outputStr
+
+
+class AnimalNode:
+    def __init__(self,type,value="",next=None):
+        self.value= value
+        self.next = next
+        self.type = type
+
+class AnimalShelter:
+    def __init__(self):
+        self.front = None
+        self.rear = None
+
+    def enqueue(self,animal,value):
+        node = AnimalNode(animal,value) 
+        if animal == 'cat' or animal == 'dog':
+            self.type = AnimalNode(animal,value)
+        else:
+            raise Exception('only Cats and Dogs')
+
+        if self.front is None:
+            self.front=node
+            self.rear=node
+        else:
+            self.rear.next=node
+            self.rear=node
+
+    def dequeue(self,pref):
+        if pref == 'cat':
+            current=self.front
+            if current.type == pref:
+                self.front=current.next
+                current.next = None
+            else:
+                prev=current
+                current=current.next
+                while current.type != pref:
+                    prev=current
+                    current=current.next
+                prev.next=current.next
+                current.next=None
+        elif pref == 'dog':
+            current=self.front
+            if current.type == pref:
+                self.front=current.next
+                current.next = None
+            else:
+                prev=current
+                current=current.next
+                while current.type != pref:
+                    prev=current
+                    current=current.next
+                prev.next=current.next
+                current.next=None
+        else:
+            raise Exception('only Cats and Dogs')
+    def __str__(self):
+        check=self.front
+        outputStr=""
+        while check:
+            outputStr +=f"{check.value},{check.type} -> "
+            check = check.next
+        outputStr += 'NULL'
+        return outputStr
+
+    # def enqueue(self,animal,value):
+    #     if animal=='dog':
+    #         self.q1.enqueue(value)
+    #     elif animal=='cat':
+    #         self.q2.enqueue(value)
+    #     else:
+    #         raise Exception('only Cats and Dogs')
+
+    # def dequeue(self,pref):
+    #     if pref=='dog':
+    #         self.q1.dequeue()
+    #     elif pref=='cat':
+    #         self.q2.dequeue()
+    #     else:
+    #         raise Exception('NULL')
+
