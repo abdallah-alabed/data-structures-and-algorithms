@@ -179,3 +179,15 @@ Queue have 4 methods: Enqueue, Dequeue, Peek, Is empty
 using some existing classes (stack and node) we need to create a queue that functions in FIFO style.
 
 ![cc11](./cc11.png)
+
+## Challenge
+### cc12 15/11/2021
+
+create a queue for animals (dogs and cats only) where it enqueues only cats or dogs and dequeue the first cat/dog depending on the preference!
+
+
+## API
+### pseudo queue
+create an animal node class and animalshelter class from scratch.
+
+![cc12](./cc12.png)

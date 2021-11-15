@@ -40,5 +40,8 @@ Queue have 4 methods: Enqueue, Dequeue, Peek, Is empty
 
 
 
-# code challenge 11 
+## code challenge 11 
 ![cc11](../stack-and-queue/cc11.png)
+
+## code challenge 12
+![cc12](../stack-and-queue/cc12.png)
