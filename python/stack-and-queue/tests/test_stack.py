@@ -1,4 +1,4 @@
-from stack_and_queue.stack import Stack 
+from stack_and_queue.stack import Stack , validate_brackets
 import pytest
 
 def test_push_onto_stack():
@@ -51,3 +51,38 @@ def test_stack_empty_exception():
         assert stack.peek()
     with pytest.raises(Exception):
         assert stack.pop()
+
+## code challenge 13
+
+def test_1_validation():
+    assert validate_brackets('{}(){}') == True 
+
+def test_2_validation():
+    assert validate_brackets('()[[Extra Characters]]') == True 
+
+def test_3_validation():
+    assert validate_brackets('(){}[[]]') == True 
+
+def test_4_validation():
+    assert validate_brackets('{}{Code}[Fellows](())') == True 
+
+def test_5_validation():
+    assert validate_brackets('[({}]') == False 
+    
+def test_6_validation():
+    assert validate_brackets('(](') == False 
+
+def test_7_validation():
+    assert validate_brackets('{(})') == False 
+
+def test_8_validation():
+    assert validate_brackets('{') == False 
+
+def test_9_validation():
+    assert validate_brackets(')') == False 
+
+def test_10_validation():
+    assert validate_brackets('[}') == False 
+
+def test_11_validation():
+    assert validate_brackets('{}') == True
