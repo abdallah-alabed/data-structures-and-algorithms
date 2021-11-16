@@ -191,3 +191,15 @@ create a queue for animals (dogs and cats only) where it enqueues only cats or d
 create an animal node class and animalshelter class from scratch.
 
 ![cc12](./cc12.png)
+
+## Challenge
+### cc13 16/11/2021
+
+function that takes in a string and determine whether the brackets are validate!
+
+
+## API
+### pseudo queue
+used a stack to push and pop depending on the bracket entered!
+
+![cc13](./cc13.png)
