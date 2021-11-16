@@ -85,6 +85,3 @@ def validate_brackets(TestMe:str):
         return False
            
         
-
-if __name__=="__main__":
-   print(validate_brackets('{}{Code}[Fellows](())'))
