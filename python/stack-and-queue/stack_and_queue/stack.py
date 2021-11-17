@@ -36,6 +36,27 @@ class Stack():
         else:
             return True
 
+    def getMax(self):
+        if self.top is None:
+            return 'empty stack'
+        
+        else:
+            biggest= self.top.value
+            current=self.top.next
+            while current != None:
+                if current.value > biggest:
+                    biggest=current.value
+                    current=current.next
+                    continue
+                if current.value < biggest:
+                    current=current.next
+                    continue
+                elif current.value == biggest:
+                    biggest=current.value
+                    current=current.next
+                    continue
+        return biggest
+
 def validate_brackets(TestMe:str):
     stack=Stack()
     values=list(TestMe)
@@ -84,4 +105,3 @@ def validate_brackets(TestMe:str):
     if stack.is_empty() ==  False:
         return False
            
-        
