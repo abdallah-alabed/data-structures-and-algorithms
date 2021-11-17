@@ -86,3 +86,30 @@ def test_10_validation():
 
 def test_11_validation():
     assert validate_brackets('{}') == True
+
+## code challenge 14
+def test_max():
+    stack=Stack()
+    stack.push(1)
+    stack.push(2)
+    stack.push(3)
+    assert stack.getMax()==3
+
+def test_max2():
+    stack=Stack()
+    assert stack.getMax()=='empty stack'
+
+def test_max3():
+    stack=Stack()
+    stack.push(1)
+    stack.push(2)
+    stack.push(1)
+    assert stack.getMax()==2
+
+def test_max4():
+    stack=Stack()
+    stack.push(10)
+    stack.push(18)
+    stack.pop()
+    stack.push(3)
+    assert stack.getMax()==10
