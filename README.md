@@ -203,3 +203,15 @@ function that takes in a string and determine whether the brackets are validate!
 used a stack to push and pop depending on the bracket entered!
 
 ![cc13](./cc13.png)
+
+## Challenge
+### cc14 17/11/2021
+
+create a stack method that retrns the biggest node value in the stack!
+
+
+## API
+### pseudo queue
+compare the current with the next values and always change the biggest value depending on the comparison!
+
+![cc14](./cc14.png)
