@@ -246,3 +246,5 @@ get the nodes array and loop it to find the maxiimum value
 ### max_value
 checks wether the root value isnt None
 then gets the tree nodes array amd loop it to find the maximum value in that array!
+
+![cc16](./cc16.png)

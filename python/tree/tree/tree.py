@@ -49,10 +49,10 @@ class BinaryTree():
         return _traverse
 
     def max_val(self):
+        tree = self.pre_order()
         if self.root is None:
                 return 'Tree in Empty'
         else:
-            tree = self.pre_order()
             max = self.root.value
             for i in tree(self.root):
                 if i > max: 
