@@ -21,6 +21,7 @@ class BinaryTree():
             return output
         return _traverse
 
+
     def in_order(self):
         output = []
         def _traverse(_root):
@@ -46,6 +47,17 @@ class BinaryTree():
             output.append(_root.value)
             return output
         return _traverse
+
+    def max_val(self):
+        if self.root is None:
+                return 'Tree in Empty'
+        else:
+            tree = self.pre_order()
+            max = self.root.value
+            for i in tree(self.root):
+                if i > max: 
+                    max = i
+            return max
 
 class BinarySearchTree(BinaryTree):
 

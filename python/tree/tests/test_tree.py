@@ -88,4 +88,30 @@ def test_add_contain_bst2():
     search.add(-5)
     assert search.contains(101) == False
 
+## Testing max value , code challenge 16
+def test_max_1():
+    tree = BinaryTree()
+    tree.root=Node(9)
+    tree.root.left=Node(4)
+    tree.root.right=Node(3)
+    assert tree.max_val() == 9
 
+def test_max_2():
+    tree = BinaryTree()
+    tree.root=Node(9)
+    tree.root.left=Node(5)
+    tree.root.left.left=Node(1)
+    tree.root.left.left.left=Node(10)
+    tree.root.left.left.right=Node(18)
+    tree.root.left.right=Node(5)
+    tree.root.right=Node(3)
+    tree.root.right.left=Node(12)
+    tree.root.right.left.left=Node(15)
+    tree.root.right.left.right=Node(17)
+    tree.root.right.right=Node(55)
+    tree.root.right.right.right=Node(8)
+    assert tree.max_val() == 55
+
+def test_max_3():
+    tree = BinaryTree()
+    assert tree.max_val() == 'Tree in Empty'

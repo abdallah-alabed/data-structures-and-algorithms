@@ -16,3 +16,14 @@ using recursive function inside the method itself
 1. Add: add nodes to the search tree depending on the value relative to the node value.
 2. Contains: check wether the inserted value exists in the tree
  
+
+## Challenge 21/11 cc16
+new method to find the max value
+
+## Approach & Efficiency
+get the nodes array and loop it to find the maxiimum value
+
+## API
+### max_value
+checks wether the root value isnt None
+then gets the tree nodes array amd loop it to find the maximum value in that array!
