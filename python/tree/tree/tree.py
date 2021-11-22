@@ -59,8 +59,33 @@ class BinaryTree():
                     max = i
             return max
 
-class BinarySearchTree(BinaryTree):
+def breadth_first(root):
+    answer=[]
+    if root is None:
+        return 'Tree in Empty'
+    else:
+        answer.append(root.value)
+        def _traverse(root):
+            if root.left is not None:
+               answer.append(root.left.value)
+            if root.right is not None:
+               answer.append(root.right.value)
+              
+        
+        _traverse(root)
+        _traverse(root.left)
+        _traverse(root.right)
 
+        if root.left.left != None or root.left.right != None:
+            _traverse(root.left.left)
+
+        if root.right.left != None or root.right.right != None:
+            _traverse(root.right.right)
+
+    return answer
+    
+
+class BinarySearchTree(BinaryTree):
     def add(self,value):
         node = Node(value)
         def _traverse(root):
@@ -99,3 +124,38 @@ class BinarySearchTree(BinaryTree):
                 return False
         return (_traverse(self.root))
 
+
+### for cc17
+class Queue():
+    def __init__(self):
+        self.front = None
+        self.rear = None
+
+    def enqueue(self,value):
+        node=Node(value)
+        if not self.rear:
+            self.front = node
+            self.rear = node
+        else:
+            self.rear.next = node
+            self.rear = node
+        
+    def dequeue(self):
+        if self.front != None:        
+            temp = self.front
+            self.front = temp.next
+            temp.next=None
+        else:
+            raise Exception('Queue is Empty')
+
+    def peek(self):
+        if self.front != None: 
+            return self.front.value
+        else:
+            raise Exception('Queue is Empty')
+
+    def is_empty(self):
+        if self.front is None:
+            return True
+        else:
+            return False
