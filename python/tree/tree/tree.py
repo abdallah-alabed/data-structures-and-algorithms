@@ -59,8 +59,33 @@ class BinaryTree():
                     max = i
             return max
 
-class BinarySearchTree(BinaryTree):
+def breadth_first(root):
+    answer=[]
+    if root is None:
+        return 'Tree in Empty'
+    else:
+        answer.append(root.value)
+        def _traverse(root):
+            if root.left is not None:
+               answer.append(root.left.value)
+            if root.right is not None:
+               answer.append(root.right.value)
+              
+        
+        _traverse(root)
+        _traverse(root.left)
+        _traverse(root.right)
 
+        if root.left.left != None or root.left.right != None:
+            _traverse(root.left.left)
+
+        if root.right.left != None or root.right.right != None:
+            _traverse(root.right.right)
+
+    return answer
+    
+
+class BinarySearchTree(BinaryTree):
     def add(self,value):
         node = Node(value)
         def _traverse(root):

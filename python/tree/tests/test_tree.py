@@ -1,7 +1,6 @@
 from tree import __version__
 import tree
-from tree.tree import Node , BinaryTree , BinarySearchTree
-
+from tree.tree import Node , BinaryTree , BinarySearchTree, breadth_first
 def test_version():
     assert __version__ == '0.1.0'
 
@@ -103,7 +102,7 @@ def test_max_2():
     tree.root.left.left=Node(1)
     tree.root.left.left.left=Node(10)
     tree.root.left.left.right=Node(18)
-    tree.root.left.right=Node(5)
+    tree.root.left.right=Node(6)
     tree.root.right=Node(3)
     tree.root.right.left=Node(12)
     tree.root.right.left.left=Node(15)
@@ -115,3 +114,46 @@ def test_max_2():
 def test_max_3():
     tree = BinaryTree()
     assert tree.max_val() == 'Tree in Empty'
+
+## Testing breadth , code challenge 17
+def test_breadth_1():
+    tree = BinaryTree()
+    tree.root=Node(9)
+
+    tree.root.left=Node(4)
+    tree.root.right=Node(3)
+
+    print(breadth_first(tree.root))
+    assert breadth_first(tree.root) == [9,4,3]
+
+def test_breadth_2():
+    tree = BinaryTree()
+    tree.root=Node(9)
+
+    tree.root.left=Node(4)
+    tree.root.right=Node(3)
+
+    tree.root.left.left=Node(1)
+    tree.root.left.right=Node(5)
+    tree.root.right.left=Node(12)
+    tree.root.right.right=Node(22)
+
+    print(breadth_first(tree.root))
+    assert breadth_first(tree.root) == [9,4,3,1,5,12,22]
+
+def test_breadth_3():
+    tree = BinaryTree()
+    tree.root=Node(9)
+
+    tree.root.left=Node(4)
+    tree.root.right=Node(3)
+
+    tree.root.left.left=Node(1)
+    tree.root.left.right=Node(5)
+    tree.root.right.left=Node(12)
+    tree.root.right.right=Node(22)
+
+    tree.root.left.left.left=Node(10)
+    tree.root.left.left.right=Node(18)
+    print(breadth_first(tree.root))
+    assert breadth_first(tree.root) == [9,4,3,1,5,12,22,10,18]
