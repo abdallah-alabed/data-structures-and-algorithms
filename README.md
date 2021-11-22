@@ -240,11 +240,25 @@ using recursive function inside the method itself
 new method to find the max value
 
 ## Approach & Efficiency
-get the nodes array and loop it to find the maxiimum value
+get the nodes array and loop it to find the maximum value
 
 ## API
 ### max_value
 checks wether the root value isnt None
-then gets the tree nodes array amd loop it to find the maximum value in that array!
+then gets the tree nodes array and loop it to find the maximum value in that array!
 
 ![cc16](./cc16.png)
+
+
+## Challenge 22/11 cc16
+new function to find print the tree level by level (breadth-first)
+
+## Approach & Efficiency
+traverse level by level and return the nodes
+
+## API
+### breadth first
+checks wether the root value isnt None
+then gets the tree nodes array level by level and print the levels nodes!
+
+![cc17](./cc17.png)
