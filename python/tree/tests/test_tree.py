@@ -1,6 +1,6 @@
 from tree import __version__
 import tree
-from tree.tree import Node , BinaryTree , BinarySearchTree, breadth_first
+from tree.tree import Node , BinaryTree , BinarySearchTree, breadth_first 
 def test_version():
     assert __version__ == '0.1.0'
 
@@ -157,3 +157,29 @@ def test_breadth_3():
     tree.root.left.left.right=Node(18)
     print(breadth_first(tree.root))
     assert breadth_first(tree.root) == [9,4,3,1,5,12,22,10,18]
+
+
+def test_fizz_buzz1():
+    tree = BinaryTree()
+    tree.root=Node(9)
+    tree.root.left=Node(4)
+    tree.root.right=Node(3)
+    assert tree.fizz_buzz_tree() == ['Fizz',4,'Fizz']
+
+def test_fizz_buzz2():
+    tree = BinaryTree()
+    tree.root=Node(3)
+    tree.root.left=Node(5)
+    tree.root.right=Node(6)
+    tree.root.left.left=Node(10)
+    tree.root.left.right=Node(22)
+    tree.root.right.left=Node(21)
+    tree.root.right.right=Node(20)
+    assert tree.fizz_buzz_tree() == ['Fizz','Buzz','Buzz',22,'Fizz','Fizz','Buzz']
+
+def test_fizz_buzz3():
+    tree = BinaryTree()
+    tree.root=Node(9)
+    tree.root.left=Node(15)
+    tree.root.right=Node(30)
+    assert tree.fizz_buzz_tree() == ['Fizz','FizzBuzz','FizzBuzz']

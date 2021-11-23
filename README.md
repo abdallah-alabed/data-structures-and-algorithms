@@ -250,7 +250,7 @@ then gets the tree nodes array and loop it to find the maximum value in that arr
 ![cc16](./cc16.png)
 
 
-## Challenge 22/11 cc16
+## Challenge 22/11 cc17
 new function to find print the tree level by level (breadth-first)
 
 ## Approach & Efficiency
@@ -262,3 +262,11 @@ checks wether the root value isnt None
 then gets the tree nodes array level by level and print the levels nodes!
 
 ![cc17](./cc17.png)
+
+## Challenge 23/11 cc18
+new method to to create fizz,buzz output tree
+
+## Approach & Efficiency
+create a post_order tree and the check the output and replace it with fizz,buzz and fizzbuzz
+
+![cc18](./cc18.png)
