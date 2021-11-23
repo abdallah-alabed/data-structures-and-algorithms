@@ -52,12 +52,32 @@ class BinaryTree():
         tree = self.pre_order()
         if self.root is None:
                 return 'Tree in Empty'
+
         else:
             max = self.root.value
             for i in tree(self.root):
                 if i > max: 
                     max = i
             return max
+    def fizz_buzz_tree(self):
+        tree = self.pre_order()
+
+        if self.root is None:
+            return 'Tree in Empty'  
+
+        else:
+            output=[]
+            for i in tree(self.root):
+                if i%15 == 0: 
+                   output.append('FizzBuzz')
+                elif i%5 == 0: 
+                    output.append('Buzz')
+                elif i%3 == 0:
+                   output.append('Fizz')
+                else:
+                    output.append(i)
+            return output
+    
 
 def breadth_first(root):
     answer=[]
@@ -82,8 +102,7 @@ def breadth_first(root):
         if root.right.left != None or root.right.right != None:
             _traverse(root.right.right)
 
-    return answer
-    
+    return answer      
 
 class BinarySearchTree(BinaryTree):
     def add(self,value):
