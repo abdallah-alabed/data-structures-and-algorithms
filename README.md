@@ -270,3 +270,12 @@ new method to to create fizz,buzz output tree
 create a post_order tree and the check the output and replace it with fizz,buzz and fizzbuzz
 
 ![cc18](./cc18.png)
+
+
+## Challenge 5/12 cc26
+array sort from small to large
+
+## Approach & Efficiency
+sort using the comparison of the current list item and replace it with the next small number
+
+![cc26](./cc26.png)
