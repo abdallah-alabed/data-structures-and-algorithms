@@ -17,6 +17,25 @@ Selection Sort is a sorting algorithm that traverses the array multiple times as
 &nbsp;
 
 ## Tracing
+[8,4,23,42,16,15]
+
+step 1: compare current value (8), because 4 is smaller than the rest pf the items we replace it \
+[4,8,23,42,16,15]
+
+step 2: compare current value (8), because 8 is the smallest we dont switch! \
+[4,8,23,42,16,15]
+
+step 3: compare current value (23), we have a smaller number which is 15 so replace them  \
+[4,8,15,42,16,23]
+
+step 4: compare current value (42), we have a smaller number which is 16 so replace them  \
+[4,8,15,16,42,23]
+
+step 5: compare current value (42), we have a smaller number which is 23 so replace them  \
+[4,8,15,16,23,42]
+
+#### Now We have a sorted list!
+
 ![cc26](./cc26.png)
 
 ## Big0
