@@ -62,5 +62,5 @@ step4: now that no arrays are longer than 1 in length we merge the arrays \
 ![cc27](./cc27.png)
 
 ## Big0
-1. Time Complexity:  O(n)
+1. Time Complexity:  O(nlogn)
 2. Space Complexity: O(n)
