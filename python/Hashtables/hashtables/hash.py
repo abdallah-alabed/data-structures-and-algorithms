@@ -55,8 +55,7 @@ class Hashtable():
         else:
             return True
 
-    def __str__(self):
-        return str(Hashtable)
+
 
 if __name__ == "__main__":
     hash=Hashtable()
