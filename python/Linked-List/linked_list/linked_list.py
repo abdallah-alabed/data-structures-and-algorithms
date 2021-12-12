@@ -38,7 +38,7 @@ class LinkedList:
 
     def insert_before(self,value,newValue):
         node = Node(newValue)
-        current = self.head
+        # current = self.head
         prev =self.head
 
         while current:
@@ -53,6 +53,15 @@ class LinkedList:
             prev = current
             current = current.next
 
+        # Second Solution
+        # bef = self.head
+        # innn = bef.next
+        # while value != innn.value:
+        #     bef = innn
+        #     innn = bef.next
+        
+        # bef.next=node
+        # node.next=innn
     def insert_after(self,value,newValue):
         node=Node(newValue)
         current=self.head
@@ -62,6 +71,16 @@ class LinkedList:
                 current.next = node
                 break
             current=current.next
+
+        # Second Solution
+        # innn = self.head
+        # aft = innn.next
+        # while value != innn.value:
+        #     innn = aft
+        #     aft = innn.next
+        
+        # innn.next=node
+        # node.next=aft
 
     def kthFromEnd(self,value):
         current = self.head
@@ -80,6 +99,26 @@ class LinkedList:
                 return current.value
             else:
                 current=current.next
+
+
+        # Second Solution
+        # counter =0 
+        # current=self.head
+
+        # while current.next:
+        #     counter+=1
+        #     current = current.next
+        
+        # current=self.head
+        # if value < 0:
+        #     return 'Exception'
+        # elif value > counter:
+        #     return 'Exception'
+        # else:
+        #     while counter - value !=0:
+        #         current = current.next
+        #         counter-=1
+        #     return current.value
        
 
     def __str__(self):
@@ -138,3 +177,12 @@ def reverseMe(ll):
         if following:               
             following = following.next    
     ll.head = previous
+
+
+
+if __name__ == "__main__":
+    ll=LinkedList()
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    print(ll.kthFromEnd(1))
