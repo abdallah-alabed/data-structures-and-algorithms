@@ -55,17 +55,17 @@ class Hashtable():
         else:
             return True
 
-def repeatedWord(string):
-    hash=Hashtable()
-    x=string.replace(',','')
-    x = x.lower()
-    x=x.split()
-    # print(x)
-    for i in x:
-        node=Node(i,0)
-        if hash.contain(i):
-            return i
-        hash.add(i,0)
+# def repeatedWord(string):
+#     hash=Hashtable()
+#     x=string.replace(',','')
+#     x = x.lower()
+#     x=x.split()
+#     # print(x)
+#     for i in x:
+#         node=Node(i,0)
+#         if hash.contain(i):
+#             return i
+#         hash.add(i,0)
         
 
 
