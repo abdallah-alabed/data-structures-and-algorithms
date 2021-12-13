@@ -1,7 +1,7 @@
 from hashtables import __version__
 import hashtables
-from hashtables.hash import Hashtable, repeatedWord
-
+from hashtables.hash import Hashtable
+from hashtables.hash_repeted import repeatedWord
 
 def test_version():
     assert __version__ == '0.1.0'
