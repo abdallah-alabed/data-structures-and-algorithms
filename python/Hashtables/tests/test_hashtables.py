@@ -2,6 +2,7 @@ from hashtables import __version__
 from hashtables.hash import Hashtable
 from hashtables.hash_repeted import repeatedWord
 from hashtables.tree_intersection import tree_intersection , Node , BinaryTree
+from hashtables.hashmap_leftjoin import left_join
 
 
 def test_version():
@@ -47,6 +48,7 @@ def test_4():
 
 
 def test_5():
+    output=[]
     h = Hashtable()
     h.add('ABD', 100)
     h.add('BAD', 50)
@@ -85,53 +87,77 @@ def test_repeat_3():
 
 
 
-def test_tree_intersection():
-    node1 = Node(150)
-    node2 = Node(100)
-    node3 = Node(250)
-    node4 = Node(75)
-    node5 = Node(160)
-    node6 = Node(200)
-    node7 = Node(350)
-    node8 = Node(125)
-    node9 = Node(175)
-    node10 = Node(300)
-    node11 = Node(500)
-    binary_tree1=BinaryTree()
-    binary_tree1.root=node1
-    node1.left = node2
-    node1.right = node3
-    node2.left = node4
-    node2.right = node5
-    node3.left = node6
-    node3.right = node7
-    node5.left = node8
-    node5.right = node9
-    node7.left = node10
-    node7.right = node11
+def test_leftjoin():
+    syn=Hashtable()
+    syn.add('fond','enamored')
+    syn.add('wrath','anger')
+    syn.add('diligent','employed')
+    syn.add('outift','garb')
+    syn.add('guide','usher')
 
-    node_one = Node(42)
-    node_two = Node(100)
-    node_three = Node(600)
-    node_four = Node(15)
-    node_five = Node(160)
-    node_six = Node(200)
-    node_seven = Node(350)
-    node_eight = Node(125)
-    node_nine = Node(175)
-    node_ten = Node(4)
-    node_eleven = Node(500)
-    binary_tree2=BinaryTree()
-    binary_tree2.root=node_one
-    node_one.left = node_two
-    node_one.right = node_three
-    node_two.left = node_four
-    node_two.right = node_five
-    node_three.left = node_six
-    node_three.right = node_seven
-    node_five.left = node_eight
-    node_five.right = node_nine
-    node_seven.left = node_ten
-    node_seven.right = node_eleven
+    ant=Hashtable()
+    ant.add('fond','averse')
+    ant.add('wrath','delight')
+    ant.add('diligent','idle')
+    ant.add('flow','jam')
+    ant.add('guide','follow')
+    print(left_join(syn,ant))
+    assert left_join(syn,ant) == [  ['wrath','anger','delight'],
+                                    ['outift','garb','NULL'],
+                                    ['diligent','employed','idle'],
+                                    ['guide','usher','follow'],
+                                    ['fond','enamored','averse']
+                                ]
 
-    assert tree_intersection(binary_tree1,binary_tree2) == [100, 160, 125, 175, 200, 350, 500]
+
+
+# def test_tree_intersection():
+#     node1 = Node(150)
+#     node2 = Node(100)
+#     node3 = Node(250)
+#     node4 = Node(75)
+#     node5 = Node(160)
+#     node6 = Node(200)
+#     node7 = Node(350)
+#     node8 = Node(125)
+#     node9 = Node(175)
+#     node10 = Node(300)
+#     node11 = Node(500)
+#     binary_tree1=BinaryTree()
+#     binary_tree1.root=node1
+#     node1.left = node2
+#     node1.right = node3
+#     node2.left = node4
+#     node2.right = node5
+#     node3.left = node6
+#     node3.right = node7
+#     node5.left = node8
+#     node5.right = node9
+#     node7.left = node10
+#     node7.right = node11
+
+#     node_one = Node(42)
+#     node_two = Node(100)
+#     node_three = Node(600)
+#     node_four = Node(15)
+#     node_five = Node(160)
+#     node_six = Node(200)
+#     node_seven = Node(350)
+#     node_eight = Node(125)
+#     node_nine = Node(175)
+#     node_ten = Node(4)
+#     node_eleven = Node(500)
+#     binary_tree2=BinaryTree()
+#     binary_tree2.root=node_one
+#     node_one.left = node_two
+#     node_one.right = node_three
+#     node_two.left = node_four
+#     node_two.right = node_five
+#     node_three.left = node_six
+#     node_three.right = node_seven
+#     node_five.left = node_eight
+#     node_five.right = node_nine
+#     node_seven.left = node_ten
+#     node_seven.right = node_eleven
+
+#     assert tree_intersection(binary_tree1,binary_tree2) == [100, 160, 125, 175, 200, 350, 500]
