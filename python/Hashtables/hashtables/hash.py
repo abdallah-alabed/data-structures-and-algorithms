@@ -69,13 +69,26 @@ class Hashtable():
         
 
 
+# def most_common(string):
+#     h=Hashtable()
+#     text=string.replace(',' , '')
+#     text=text.replace('.' , '')
+#     text=text.lower()
+#     text=text.split()
+#     output=[]
+#     for i in text:
+#         if h.contain(i) :
+#             output.append(i)
+#         else:
+#             h.add(i,0)
+#     print(output)
+#     if len(output) != 0:
+#         answer=max(output,key=output.count)
+#         return answer
+
 
 # if __name__ == "__main__":
    
-#     print(repeatedWord('Once upon a time, there was a brave princess who'))
-
-#     print(repeatedWord('It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only..."'))
-
-#     print(repeatedWord('It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York...'))
-
-
+#     most_common('In a galaxy far far away')
+#     most_common('Taco cat ate a taco')
+#     most_common('No. Try not. Do or do not. There is no try.')
