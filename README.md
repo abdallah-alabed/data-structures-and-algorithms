@@ -344,3 +344,72 @@ O(n)
 Space Complexity: \
 O(2)  
 > created extra array x
+
+## Code Challenge 32 (Trees Intersection)
+
+### Tests List
+1. Return the similar nodes in two binary trees!
+
+
+### Challenge
+create a function that takes in two binary trees and return the nodes that are repeated in both of the binary trees
+
+### Approach & Efficiency
+**Big0:** \
+Time  Complexity: \
+O(n)
+> because we loop through the list of words
+
+Space Complexity: \
+O(1)  
+> No Extra Spaces in the memory were used!
+
+## Code Challenge 33 (Left Join )
+### Tests List
+1. Test the matches from two hashatbles
+
+### Challenge
+create a function that takes in two hasahmaps and compare them together in reference to the left hashmap and 
+return either [left.key , left.value , right.value] or [left.key , left.value , 'NULL'] regarding on the existance of the key!
+
+### Approach & Efficiency
+get the key,value pairs and start comparing them and fill the output array !
+
+**Big0:** \
+Time  Complexity: O(n^2)
+Space Complexity: O(1)
+
+### API
+1. JoinLeft: if the item is in the left hashmap (synonms) we append to the output array if not we dont look if we have extra keys in the right hashmap!
+
+
+### WhiteBoaard
+![cc33](./cc33.png)
+
+# Graphs
+is a non-linear data structure that can be looked at as a collection of vertices (or nodes) potentially connected by line segments named edges.
+
+## Code Challenge 35
+## Challenge
+1. add node: add a node (vertix) to the graph
+2. add edge: create an edge to connect two vertices together
+3. get nodes: return all the nodes in the graph
+4. get neighbors: return all the neighbor vertices to the requested vertix
+5. size: return the size of the graph
+
+## Approach & Efficiency
+1. had to create 3 classes:
+    - graph
+    - vertix
+    - edge
+2. add node: create a vertix and add it to the adjacency list
+3. add edge: takes the first and last vertices and create an edge between them
+4. get nodes: return all the nodes in the adjacency list
+5. get neighbors: takes the target vertix and return all the neighbor vertices to the requested vertix
+6. size: return the size of the graph
+
+## API
+Vertex - A vertex, also called a “node”, is a data object that can have zero or more adjacent vertices.
+Edge - An edge is a connection between two nodes.
+Neighbor - The neighbors of a node are its adjacent nodes, i.e., are connected via an edge.
+Degree - The degree of a vertex is the number of edges connected to that vertex.
