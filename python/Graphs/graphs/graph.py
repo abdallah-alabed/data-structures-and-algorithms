@@ -1,18 +1,23 @@
-# from collections import deque
+from collections import deque
 
-# class Queue:
-#     def __init__(self):
-#         self.dq = deque()
+class Queue:
+    def __init__(self):
+        self.dq = deque()
 
-#     def enqueue(self, value):
-#         self.dq.appendLeft(value)
+    def enqueue(self, value):
+        self.dq.appendleft(value)
 
-#     def dequeue(self):
-#         self.dq.pop()
+    def dequeue(self):
+        self.dq.pop()
 
-#     def __len__(self):
-#         return len(self.dq)
+    def __len__(self):
+        return len(self.dq)
 
+    def peek(self):
+        if self.front != None: 
+            return self.front.value
+        else:
+            raise Exception('Queue is Empty')
 
 # class Stack:
 #     def __init__(self):
@@ -29,9 +34,12 @@ class Vertex:
         self.value = value
 
 class Edge:
-    def __init__(self, vertex, weight):
+    def __init__(self, vertex, weight=1):
         self.vertex = vertex
         self.weight = weight
+
+    def __str__(self):
+        return str(self.vertex)
 
 class Graph:
     def __init__(self):
@@ -42,7 +50,7 @@ class Graph:
         self.__adj_list[v] = []
         return v
 
-    def add_edge(self, start_vertex, end_vertex, weight=0):
+    def add_edge(self, start_vertex, end_vertex, weight=1):
         if start_vertex not in self.__adj_list:
             raise KeyError("Start Vertex not found in graph")
 
@@ -60,3 +68,28 @@ class Graph:
 
     def size(self):
         return len(self.__adj_list)
+
+    def bfs(self, start_vertex):
+        queue = Queue()
+        result = []
+        visited = set()
+
+        queue.enqueue(start_vertex)
+        visited.add(start_vertex)
+        result.append(start_vertex.value)
+    
+        while len(queue) != 0:
+            print(queue.dq)
+            current_vertex = queue.dq[-1] #queue.dequeue()
+            neighbors = self.get_neighbors(current_vertex)
+            current_vertex=queue.dequeue()
+            
+            for edge in neighbors:
+                neighbor = edge.vertex
+                if neighbor not in visited:
+                    queue.enqueue(neighbor)
+                    visited.add(neighbor)
+                    result.append(neighbor.value)
+                    
+        print(result)
+        return result

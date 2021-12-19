@@ -19,6 +19,23 @@ is a non-linear data structure that can be looked at as a collection of vertices
 5. get neighbors: takes the target vertix and return all the neighbor vertices to the requested vertix
 6. size: return the size of the graph
 
+## BigO
+1. add node
+    - Space Complexity: O(1)
+    - Time Complexity: O(1)
+2. add edge
+    - Space Complexity: O(1)
+    - Time Complexity: O(1)
+3. get nodes
+    - Space Complexity: O(1)
+    - Time Complexity: O(1)
+4. get neighbors
+    - Space Complexity: O(1)
+    - Time Complexity: O(1)
+5. size
+    - Space Complexity: O(1)
+    - Time Complexity: O(1)
+    
 ## API
 Vertex - A vertex, also called a “node”, is a data object that can have zero or more adjacent vertices.
 Edge - An edge is a connection between two nodes.
