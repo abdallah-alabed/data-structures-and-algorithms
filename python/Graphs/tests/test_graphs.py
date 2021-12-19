@@ -58,7 +58,44 @@ def test_graph_size_empty():
 
 
 
+## Code Challenge 36
+# Write at least three test assertions for each method that you define.
 
+def test_breadth_1():
+    g= Graph()
+    one=g.add_node('Pandora')
+    two=g.add_node('Arendelle')
+    g.add_edge(one, two)
+    three=g.add_node('Metroville')
+    four=g.add_node('Monstroplolis')
+    g.add_edge(two, three, 1)
+    g.add_edge(two, four, 1)
+    g.add_edge(four, three, 1)
+    five=g.add_node('Narnia')
+    six=g.add_node('Naboo')
+    g.add_edge(three,five,1)
+    g.add_edge(three,six,1)
+    g.add_edge(four,six,1)
+    g.add_edge(five,six, 1)
+    assert g.bfs(one) == ['Pandora', 'Arendelle', 'Metroville', 'Monstroplolis', 'Narnia', 'Naboo']
+
+
+def test_breadth_2():
+    g= Graph()
+    one  =g.add_node('one'  )
+    two  =g.add_node('two'  )
+    three=g.add_node('three')
+    four =g.add_node('four' )
+    g.add_edge(one, two, 1)
+    g.add_edge(one, three, 1)
+    g.add_edge(three, four, 1)
+    g.add_edge(two, four, 1)
+    assert g.bfs(one) == ['one', 'two', 'three', 'four']
+
+def test_breadth_3():
+    g= Graph()
+    one  =g.add_node('one'  )
+    assert g.bfs(one) == ['one']
 
 
 
