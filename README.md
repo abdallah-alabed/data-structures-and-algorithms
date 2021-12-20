@@ -408,8 +408,62 @@ is a non-linear data structure that can be looked at as a collection of vertices
 5. get neighbors: takes the target vertix and return all the neighbor vertices to the requested vertix
 6. size: return the size of the graph
 
+## BigO
+1. add node
+    - Space Complexity: O(1)
+    - Time Complexity: O(1)
+2. add edge
+    - Space Complexity: O(1)
+    - Time Complexity: O(1)
+3. get nodes
+    - Space Complexity: O(1)
+    - Time Complexity: O(1)
+4. get neighbors
+    - Space Complexity: O(1)
+    - Time Complexity: O(1)
+5. size
+    - Space Complexity: O(1)
+    - Time Complexity: O(1)
+
 ## API
 Vertex - A vertex, also called a “node”, is a data object that can have zero or more adjacent vertices.
 Edge - An edge is a connection between two nodes.
 Neighbor - The neighbors of a node are its adjacent nodes, i.e., are connected via an edge.
 Degree - The degree of a vertex is the number of edges connected to that vertex.
+
+## Code Challenge 36 (Breadth-First Traversal of a Graph)
+## Challenge 
+1. Loop Through the graph and output the vertices in breadth first formation
+2. Arguments (input) : Node 
+3. Return (output) : A collection of nodes in the order they were visited. (Display the collection in array)
+
+
+## Approach & Efficiency
+1. Create a method called bfs (Breadth First Search) that takes in the starting vertix as an input
+2. mark every vertex that enters the queue as visited so we remove any duplications in vising the vertecies !
+3. we get the vertex neighbors and then we dequeue it
+4. we keep repeating the process until we clear the queue and visit all the vertices
+
+## BigO
+1. Space Complexity: O(1)
+
+2. Time Complexity: O(n^2)
+
+## API
+Breadth First Search: explores all vertecies at the present depth prior to moving on to the vertecies at the next depth level. Extra memory, usually a queue, is needed to keep track of the child nodes that were encountered but not yet explored.
+
+## Code Challenge 37 (Business-trip)
+## Challenge 
+Create a function that calculates the route cost for the an input array of lists.
+
+
+## Approach & Efficiency
+1. Create a function called business_trip  that takes in a grapgh and a route array (cityNames)
+2. for every city in the list we find its neighbors 
+3. we check if the next city in the array is a neighbor to the first one and return [False , "$0"] if Not
+4. we keep repeating the process and addind the edges weight to get the final cost !
+
+## BigO
+1. Space Complexity: O(1)
+
+2. Time Complexity: O(n)
