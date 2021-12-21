@@ -19,15 +19,15 @@ class Queue:
         else:
             raise Exception('Queue is Empty')
 
-# class Stack:
-#     def __init__(self):
-#         self.dq = deque()
+class Stack:
+    def __init__(self):
+        self.dq = deque()
 
-#     def push(self, value):
-#         self.dq.append(value)
+    def push(self, value):
+        self.dq.append(value)
 
-#     def pop(self):
-#         self.dq.pop()
+    def pop(self):
+        self.dq.pop()
 
 class Vertex:
     def __init__(self, value):
@@ -69,6 +69,21 @@ class Graph:
     def size(self):
         return len(self.__adj_list)
 
+    def dfs(self, start_vertex):
+        result = []
+        result.append(start_vertex.value)
+
+        def trav(vertex):
+            edge =self.__adj_list[vertex]
+            for i in edge:
+                my_vertex = i.vertex.value
+                if my_vertex not in result:
+                    result.append(my_vertex)
+                    trav(i.vertex)
+        trav(start_vertex)
+        return result
+            
+
     def bfs(self, start_vertex):
         queue = Queue()
         result = []
@@ -79,7 +94,7 @@ class Graph:
         result.append(start_vertex.value)
     
         while len(queue) != 0:
-            print(queue.dq)
+            # print(queue.dq)
             current_vertex = queue.dq[-1] #queue.dequeue()
             neighbors = self.get_neighbors(current_vertex)
             current_vertex=queue.dequeue()
