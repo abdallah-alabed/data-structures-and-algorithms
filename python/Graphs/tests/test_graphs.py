@@ -1,5 +1,5 @@
 from graphs import __version__
-from graphs.graph import Vertex , Edge , Graph
+from graphs.graph import Vertex , Edge , Graph 
 from graphs.buisness_trip import business_trip
 
 def test_version():
@@ -144,3 +144,51 @@ def test_business_trip():
     assert [True, '$115'] == business_trip(graph,[arendelle,monstropolis, naboo])
     assert [False, "$0"] == business_trip(graph,[naboo, pandora])
     assert [False, '$0'] == business_trip(graph,[narnia, arendelle,naboo])
+
+def test_depth_first():
+    graph = Graph()
+
+    node_a =graph.add_node('a')
+    node_b =graph.add_node('b')
+    node_c =graph.add_node('c')
+    node_d =graph.add_node('d')
+    node_e =graph.add_node('e')
+    node_f =graph.add_node('f')
+    node_g =graph.add_node('g')
+    node_h =graph.add_node('h')
+
+    # a Edges
+    graph.add_edge(node_a,node_b)
+    graph.add_edge(node_a,node_d)
+    
+    # b Edges
+    graph.add_edge(node_b,node_a)
+    graph.add_edge(node_b,node_c)
+    graph.add_edge(node_b,node_d)
+
+    # c Edges
+    graph.add_edge(node_c,node_b)
+    graph.add_edge(node_c,node_g)
+
+    # d Edges
+    graph.add_edge(node_d,node_a)
+    graph.add_edge(node_d,node_b)
+    graph.add_edge(node_d,node_e)
+    graph.add_edge(node_d,node_f)
+    graph.add_edge(node_d,node_h)
+
+    # e Edges
+    graph.add_edge(node_e,node_d)
+
+    # f Edges
+    graph.add_edge(node_f,node_d)
+    graph.add_edge(node_f,node_h)
+
+    # g Edges
+    graph.add_edge(node_g,node_c)
+
+    # h Edges
+    graph.add_edge(node_h,node_d)
+    graph.add_edge(node_h,node_f)
+
+    assert graph.dfs(node_a) == ['a', 'b', 'c', 'g', 'd', 'e', 'f', 'h']

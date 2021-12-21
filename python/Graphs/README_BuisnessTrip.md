@@ -1,7 +1,7 @@
 # Graphs
 is a non-linear data structure that can be looked at as a collection of vertices (or nodes) potentially connected by line segments named edges.
 
-## Code Challenge 37 (Business-trip)
+## Code Challenge 38 (Business-trip)
 ## Challenge 
 Create a function that calculates the route cost for the an input array of lists.
 
